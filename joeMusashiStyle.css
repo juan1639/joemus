@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --gris-claro: rgb(220, 220, 220);
+    --gris-claro-alpha: rgba(220, 220, 220, 0.6);
+    --blanco: rgb(240, 240, 240);
+    --blanco-alpha: rgba(240, 240, 240, 0.6);
+    --blanco-alpha8: rgba(240, 240, 240, 0.8);
+    --azul-cielo: rgba(0, 115, 164, 1);
+    --suelo: rgba(97, 125, 68, 0.8);
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 115, 164, 1);
+}
+
+.contenedor__principal {
+    position: relative;
+    /*border: 1px solid red;*/
+    width: 25vw;
+    height: 25vh;
+    background-color: inherit;
+    transform: scale(4.0, 4.0) translate(38%, 38%);
+}
+
+.titulo {
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 160px;
+    height: 20px;
+    background-position: -270px -55px;
+    background-repeat: no-repeat;
+    background-image: url('./joeMusashi_1.png');
+    background-image: url('https://spritedatabase.net/files/arcade/2589/Sprite/Shinobi.png');
+    transform: scale(0.3);
+}
+
+#centroIMI {
+    position: absolute;
+    top: 7px;
+    left: 70px;
+    font-size: 6px;
+    text-shadow: 1px 1px 1px black;
+    color: yellow;
+}
+
+.suelo {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 80px;
+    left: 0px;
+    background-color: rgba(97, 125, 68, 0.8);
+}
+
+.controls {
+    border: none;
+    border-radius: 2px;
+    width: 35px;
+    height: 15px;
+    color: #222;
+    background-color: rgba(150, 150, 150, 1);
+    margin: 4px 0 0 4px;
+    font-size: 8px;
+    box-shadow: inset 0 -1px 2px black;
+    cursor: pointer;
+}
+
+.controls:active {
+    transform: translateY(2px);
+}
+
+.Joe__Musashi {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 60px;
+    background-position: -10px -112px;
+    background-repeat: no-repeat;
+    background-image: url('./joeMusashi_1.png');
+    background-image: url('https://spritedatabase.net/files/arcade/2589/Sprite/Shinobi.png');
+    animation: andandoFrames 0.6s steps(6) infinite;
+}
+
+.katana {
+    top: 14px;
+    left: 20px;
+    width: 45px;
+    height: 65px;
+    background-position: -15px -915px;
+    animation: katanaFrames 0.5s steps(3) infinite;
+}
+
+.ataque {
+    top: 19px;
+    left: 20px;
+    width: 67px;
+    background-position: -15px -727px;
+    animation: none;
+}
+
+.lanza-suriken {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    background-position: -15px -285px;
+    animation: none;
+}
+
+.lanza-pow {
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    background-position: -210px -285px;
+    animation: none;
+}
+
+.suriken {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 35px;
+    left: 50px;
+    width: 20px;
+    height: 10px;
+    background-position: -108px -293px;
+    background-repeat: no-repeat;
+    background-image: url('./JoeMusashiSsheet.png');
+    background-image: url('https://spritedatabase.net/files/arcade/2589/Sprite/Shinobi.png');
+    animation: surikenFrames 4.4s linear 1 forwards;
+}
+
+.pow {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 31px;
+    left: 50px;
+    width: 20px;
+    height: 10px;
+    background-position: -285px -295px;
+    background-repeat: no-repeat;
+    background-image: url('./JoeMusashiSsheet.png');
+    background-image: url('https://spritedatabase.net/files/arcade/2589/Sprite/Shinobi.png');
+    animation: powFrames 3.4s linear 1 forwards;
+}
+
+@keyframes andandoFrames {
+    0% {
+        background-position: -10px -112px;
+    }
+
+    100% {
+        background-position: -220px -112px;
+    }
+}
+
+@keyframes katanaFrames {
+    0% {
+        background-position: -9px -915px;
+    }
+
+    100% {
+        background-position: -178px -915px;
+    }
+}
+
+@keyframes surikenFrames {
+    0% {
+        /*background-position: -108px -293px;*/
+        left: 50px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        /*background-position: -108px -293px;*/
+        left: 500px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes powFrames {
+    0% {
+        /*background-position: -108px -293px;*/
+        left: 50px;
+    }
+
+    100% {
+        /*background-position: -108px -293px;*/
+        left: 500px;
+    }
+}
+
