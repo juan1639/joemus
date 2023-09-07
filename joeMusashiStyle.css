@@ -38,7 +38,7 @@ html, body {
     background-position: -270px -55px;
     background-repeat: no-repeat;
     background-image: url('./joeMusashi_1.png');
-    background-image: url('https://spritedatabase.net/files/arcade/2589/Sprite/Shinobi.png');
+    /*background-image: url('https://spritedatabase.net/files/arcade/2589/Sprite/Shinobi.png');*/
     transform: scale(0.3);
 }
 
